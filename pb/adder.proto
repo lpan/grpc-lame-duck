@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pb;
+
+service Adder {
+  rpc Add(AddRequest) returns (AddReply) {}
+}
+
+message AddRequest {
+  repeated int32 operands = 1;
+}
+
+message AddReply {
+  int32 result = 1;
+}
